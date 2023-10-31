@@ -1,21 +1,163 @@
 <!DOCTYPE html>
 <html lang="eng">
     <head><meta charset="UTF-8"><title>TJS Services</title></head>
-    .column {
-        float: left;
-        width: 50%;
+    <style>
+        .row {
+            display: flex;
+        }
+        .navbar {
+            display: flex;
+            background-color: rgb(6, 86, 97);
+            min-height: 30px;
+        }
+        .rowcontent {
+            display: flex;
+            background-color: rgb(255, 255, 255);
+           
+        }
+    .columnl {
+       
+        flex: 25%;
       }
-      
+      .columnnav {
+       align-self: center;
+       text-align: center;
+       font-family: Trebuchet MS;
+       color: rgb(255, 255, 255);
+       flex: 25%;
+       border-style: solid;
+       border-color: white;
+       min-height: 30px;
+      }
+      .columnr {
+       align-self: center;
+        flex: 75%;
+      }
+      .columnw {
+       align-self: center;
+       
+       font-family: Trebuchet MS;
+       color: rgb(6, 86, 97);
+       flex: 100%;
+      }
       /* Clear floats after the columns */
       .row:after {
         content: "";
         display: table;
         clear: both;
       }
+      .bigbody {
+        background-color: black;
+      }
+    </style>
+    <script>
+    function showwhy()
+    {
+        let hidden = document.getElementById("whyus").getAttribute("hidden");
+        if (hidden){
+    document.getElementById("whyus").removeAttribute("hidden");
+    document.getElementById("process").setAttribute("hidden","hidden");
+    document.getElementById("who").setAttribute("hidden","hidden");
+    document.getElementById("news").setAttribute("hidden","hidden");
+        }
+        else
+        {
+            document.getElementById("whyus").setAttribute("hidden","hidden");
+        }
+    }
+    function showprocess()
+    {
+        let hidden = document.getElementById("process").getAttribute("hidden");
+        if (hidden){
+    document.getElementById("process").removeAttribute("hidden");
+    document.getElementById("whyus").setAttribute("hidden","hidden");
+    document.getElementById("who").setAttribute("hidden","hidden");
+    document.getElementById("news").setAttribute("hidden","hidden");
+        }
+        else
+        {
+            document.getElementById("process").setAttribute("hidden","hidden");
+        }
+    }
+    function showwho()
+    {
+        let hidden = document.getElementById("who").getAttribute("hidden");
+        if (hidden){
+    document.getElementById("who").removeAttribute("hidden");
+    document.getElementById("process").setAttribute("hidden","hidden");
+    document.getElementById("why").setAttribute("hidden","hidden");
+    document.getElementById("news").setAttribute("hidden","hidden");
+        }
+        else
+        {
+            document.getElementById("who").setAttribute("hidden","hidden");
+        }
+    }
+    </script>
 <body>
     <div class="row">
-        <div class="column"><img src="TJSWhiteBackLogo.jpg" width="150px"/></div>
-        <div class="column"><h1>TJS - "The best hookup you ever had"</h1></div>
+        <div class="columnl"><img src="TJSWhiteBackLogoN.jpg" width="150px"/></div>
+        <div class="columnr"><h1>"The best hookup you ever had"</h1></div>
     </div>
+    <div class="rowcontent"><div class="columnw">
+    <p>Welcome to TJS, your trusted partner for all your dumpster rental needs! Whether you're tackling a major construction project, decluttering your home, or simply need a convenient way to dispose of waste, we've got you covered. We're here to make your clean-up or construction process as seamless as possible, offering a wide range of dumpster sizes and top-notch customer service to match.
+    </p></div></div>
+    <div class="navbar"><div class="columnnav" onclick="showwhy()">Why Us</div><div class="columnnav"  onclick="showprocess()">Rental Process</div><div class="columnnav">News</div><div class="columnnav"  onclick="showwho()">Who We Serve</div></div>
+    <div class="rowcontent">
+        <div class="columnw" id="whyus" hidden="hidden">
+        <p>Why Choose us?</p>
+        <ul>  
+               <li>Extensive Selection: No matter the scale of your project, we have a dumpster size that suits your needs. From compact 10-yard containers to 40-yard behemoths, we've got the right size for you.</li>
+            
+                <li>Easy Ordering: Our straightforward and hassle-free ordering process ensures you get the dumpster you need when you need it. Just give us a call, and we'll take care of the rest.</li>
+            
+                <li>Prompt Delivery: We understand that time is of the essence, so we aim to deliver your dumpster when and where you need it promptly.</li>
+            
+                <li>Transparent Pricing: No hidden fees or surprises - we provide you with a clear and competitive pricing structure upfront.</li>
+            
+                <li>Flexible Rental Periods: Whether you need a dumpster for a weekend project or an extended construction job, we offer flexible rental periods that accommodate your schedule.</li>
+            
+                <li>Eco-Friendly Disposal: We're committed to responsible waste management. Rest assured that your debris will be disposed of in an environmentally-friendly manner, with recycling and sustainability in mind.</li>
+            
+                <li>Experienced Team: Our knowledgeable team is here to guide you through the rental process, providing expert advice and support.</li>
+        </ul>   
+        </div>
+    </div>
+    <div class="rowcontent">
+        <div class="columnw" id="process" hidden="hidden">
+        <p>Our Dumpster Rental Process</p>
+        <ol>
+                <li>Consultation: Contact us, and our friendly team will discuss your project requirements and recommend the right dumpster size for you.</li>
+            
+                <li>Ordering: We'll take your information and schedule a delivery date that works best for you.</li>
+            
+                <li>Delivery: Our skilled drivers will drop off the dumpster at your location, placing it exactly where you need it.</li>
+            
+                <li>Usage: Fill up the dumpster at your own pace, making your cleanup or project more convenient.</li>
+            
+                <li>Pickup: Once you've finished, just let us know, and we'll promptly pick up the dumpster, ensuring proper waste disposal.</li>
+        </ol>
+        </div>
+    </div>
+    <div class="rowcontent">
+        <div class="columnw" id="who" hidden="hidden">
+        <p>Who We Serve</p> 
+        <ul>
+                <li>Construction Sites: Contractors and builders trust us for our reliability and efficiency.</li>
+            
+                    <li>Residential Projects: Homeowners rely on our services for DIY renovations, clean-outs, and landscaping projects.</li>
+            
+                    <li>Businesses: We help commercial clients with waste management solutions tailored to their needs.</li>
+            
+                    <li>Events: Whether it's a large festival or a small gathering, we provide temporary dumpsters for efficient event clean-up.</li>
+        </ul>
+        </div>
+    </div>
+    <div class="rowcontent"><div class="columnw">
+        
+        <p>Ready to simplify your project or clean-up with a reliable dumpster rental service? Contact TJS today at 203-525-1234 or [Email Address] to get started. We're here to make waste management easy, so you can focus on what matters most.</p>     
+    </div>
+    </div>
+   
 </body>
 </html>
